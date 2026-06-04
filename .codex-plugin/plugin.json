@@ -1,0 +1,24 @@
+{
+  "name": "uni-weapp",
+  "version": "0.1.0",
+  "description": "Project-ready Codex agent and skills for uni-app + Vue WeChat mini-program development.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Uni Weapp",
+    "shortDescription": "uni-app + Vue mini-program agent and skills.",
+    "longDescription": "uni-weapp bundles a Codex custom agent, reusable uni-app/Vue skills, and a business-rule skill for recurring WeChat mini-program pitfalls: login agreement compliance, legal pages, subpackages, sharing, profile settings, version display, and ECharts.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Custom agent",
+      "Skills",
+      "Mini-program development",
+      "uni-app",
+      "Vue"
+    ],
+    "defaultPrompt": "Use the uni-weapp agent and skills to implement or review a uni-app + Vue mini-program task."
+  }
+}
