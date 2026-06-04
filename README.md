@@ -42,7 +42,7 @@ uni-weapp/
 └── README.md
 ```
 
-marketplace manifest 位于 `.agents/plugins/marketplace.json`。插件 manifest 位于 `plugins/uni-weapp/.codex-plugin/plugin.json`，插件名为 `uni-weapp`，展示名为 `Uni Weapp`。
+marketplace manifest 位于 `.agents/plugins/marketplace.json`。插件 manifest 位于 `.codex-plugin/plugin.json`，插件名为 `uni-weapp`，展示名为 `Uni Weapp`。
 
 ## 安装
 
@@ -73,11 +73,22 @@ codex plugin add uni-weapp@uni-weapp
 marketplace root does not contain a supported manifest
 ```
 
-说明传入的是普通插件目录，或者仓库根目录缺少 `.agents/plugins/marketplace.json`。Git marketplace 仓库需要同时包含 marketplace manifest 和被引用的插件目录，本仓库使用的标准路径是：
+说明传入的是普通插件目录，或者仓库根目录缺少 `.agents/plugins/marketplace.json`。本仓库采用和 `JsonLee12138/vibeRig` 相同的 Git URL source 写法，marketplace manifest 位于：
 
 ```text
 .agents/plugins/marketplace.json
-plugins/uni-weapp/
+```
+
+其中插件来源字段应使用 `url`，不是 `path`：
+
+```json
+{
+  "source": {
+    "source": "url",
+    "url": "https://github.com/JsonLee12138/uni-weapp.git",
+    "ref": "main"
+  }
+}
 ```
 
 ## 更新
@@ -103,7 +114,7 @@ codex plugin add uni-weapp@uni-weapp
 本地修改插件后，建议更新 cachebuster 再重新安装，避免 Codex 继续使用旧缓存。这个流程只用于开发调试，普通安装请使用上面的 Git marketplace 命令：
 
 ```bash
-python3 /Users/jsonlee/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py /Users/jsonlee/Projects/uni-weapp/plugins/uni-weapp
+python3 /Users/jsonlee/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py /Users/jsonlee/Projects/uni-weapp
 codex plugin add uni-weapp@uni-weapp
 ```
 
@@ -154,7 +165,7 @@ $vue-best-practices 审查这个 Vue 组件是否符合 Composition API 写法�
 修改插件 manifest 或目录结构后，可以运行插件校验：
 
 ```bash
-python3 /Users/jsonlee/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py /path/to/uni-weapp/plugins/uni-weapp
+python3 /Users/jsonlee/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py /path/to/uni-weapp
 ```
 
-把 `/path/to/uni-weapp` 替换为实际 marketplace 仓库目录。
+把 `/path/to/uni-weapp` 替换为实际插件源码目录。
