@@ -24,26 +24,21 @@
 ## 插件目录
 
 ```text
-uni-weapp-marketplace/
-├── .agents/
-│   └── plugins/
-│       └── marketplace.json
-├── plugins/
-│   └── uni-weapp/
-│       ├── .codex-plugin/
-│       │   └── plugin.json
-│       ├── .codex/
-│       │   └── agents/
-│       │       └── uni-weapp.toml
-│       ├── skills/
-│       │   ├── pinia/
-│       │   ├── uni-app/
-│       │   ├── uni-helper/
-│       │   ├── uni-weapp/
-│       │   ├── unocss/
-│       │   ├── vite/
-│       │   └── vue-best-practices/
-│       └── LICENSE
+uni-weapp/
+├── .codex-plugin/
+│   └── plugin.json
+├── .codex/
+│   └── agents/
+│       └── uni-weapp.toml
+├── skills/
+│   ├── pinia/
+│   ├── uni-app/
+│   ├── uni-helper/
+│   ├── uni-weapp/
+│   ├── unocss/
+│   ├── vite/
+│   └── vue-best-practices/
+├── LICENSE
 └── README.md
 ```
 
