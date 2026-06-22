@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-creator": {
+      "source": "JsonLee12138/vibeRig",
+      "sourceType": "github",
+      "skillPath": "skills/agent-creator/SKILL.md",
+      "computedHash": "01e8e3266102db9a0efeae45a6817e1783b632e0c996a1a1c61123a12c0bbe08"
+    },
+    "skill-builder": {
+      "source": "JsonLee12138/vibeRig",
+      "sourceType": "github",
+      "skillPath": "skills/skill-builder/SKILL.md",
+      "computedHash": "61c4d4dc182e4c0259cc1ab428fc4bb9a020020cd78e801148a7ae7401f949cd"
+    }
+  }
+}

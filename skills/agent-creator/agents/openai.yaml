@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Creator"
+  short_description: "Create Codex custom subagent configs"
+  default_prompt: "Create a Codex custom subagent with clear role boundaries and optional skill dependency guidance."
